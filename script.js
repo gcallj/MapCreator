@@ -4,6 +4,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var loadTag = true;
 //console.log(c.height);
+
 for (let j = 0; j < c.height; j = j + 10) {
     for (let i = 0; i < c.width; i = i + 10) {
         ctx.beginPath();
