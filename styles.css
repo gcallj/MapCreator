@@ -1,0 +1,18 @@
+.entradas{
+    margin: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.caixa{
+    height: 5px;
+    width: 30px;
+    font-size: 4px; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.texto{
+    text-align: center;
+}

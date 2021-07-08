@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="pt-br">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criador de mapas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <form action="" data-form>
-        <input data-input type="number"/>
-        <input data-input type="number"/>
-        <button> Apply </button>
-    </form>
-    <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;">
-    </canvas>
-    <script src="./script.js"></script>
-    
+    <center>
+        <form action="" data-button class="entradas">
+            <input class="caixa" data-height type="number" />
+            <input class="caixa" data-width type="number" />
+            <button class="caixa"> <span class="texto">Apply </span></button>
+        </form>
+        <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;">
+        </canvas>
+        <script src="./script.js"></script>
+    </center>
 </body>
+
 </html>

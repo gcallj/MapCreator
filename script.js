@@ -1,9 +1,24 @@
 var c = document.getElementById("myCanvas");
 
+const  heightData = document.querySelector('[data-height]');
+const  widthData = document.querySelector('[data-width]');
+const  applyButton = document.querySelector('[data-button]');
 
 var ctx = c.getContext("2d");
 var loadTag = true;
-//console.log(c.height);
+
+
+let myWidth,myHeight;
+
+applyButton.addEventListener('submit',function(e){ //Quando botão form for pressionado
+    e.preventDefault();//evitar que pagina atualize
+    if(widthData.value<=0 || heightData.value<=0)return
+    myWidth = widthData.value;
+    myHeight = heightData.value;
+    console.log(`altura: ${myHeight} , largura: ${myWidth}`); 
+    widthData.value=null;
+    heightData.value=null;
+})
 
 for (let j = 0; j < c.height; j = j + 10) {
     for (let i = 0; i < c.width; i = i + 10) {
@@ -36,4 +51,3 @@ c.addEventListener('click', (e) => {
     console.log(`click:  x:${pos.x} , y:${pos.y}`);
     console.log(p);
 });
-
