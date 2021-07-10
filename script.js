@@ -1,4 +1,4 @@
-var c = document.getElementById("myCanvas");
+c=document.getElementById('myCanvas')
 
 const heightData = document.querySelector('[data-height]');
 const widthData = document.querySelector('[data-width]');
@@ -6,8 +6,9 @@ const applyButton = document.querySelector('[data-button]');
 
 var ctx = c.getContext("2d");
 var loadTag = true;
-
-
+widthData.value = 100;
+heightData.value = 100;
+//clearMap(200,200);
 let myWidth, myHeight;
 
 
@@ -20,15 +21,12 @@ applyButton.addEventListener('submit', function (e) { //Quando botão form for p
     console.log(`altura: ${myHeight} , largura: ${myWidth}`);
     widthData.value = null;
     heightData.value = null;
-    c.remove();
-    c=document.createElement("canvas")
-    clearMap();
-    ctx.clearRect(0, 0, myWidth, myHeight)
-    c.style.height = myHeight + "px";
-    c.style.width = myWidth + "px";
+    clearMap(myHeight,myWidth);
+    c.height = myHeight;
+    c.width = myWidth;
 })
 
-function clearMap() {
+function clearMap(myHeight,myWidth) {
     for (let j = 0; j < myHeight; j = j + 10) {
         for (let i = 0; i < myWidth; i = i + 10) {
             ctx.beginPath();
