@@ -6,8 +6,8 @@ const applyButton = document.querySelector('[data-button]');
 
 var ctx = c.getContext("2d");
 var loadTag = true;
-widthData.value = 100;
-heightData.value = 100;
+//widthData.value = 100;
+//heightData.value = 100;
 //clearMap(200,200);
 let myWidth, myHeight;
 
